@@ -1,6 +1,1 @@
-#!/bin/bash
-for i in {a..z}; do
-  for j in {a..z}; do
-    [[ $i$j != "oo" ]] && echo $i$j
-  done
-done
+for x in {a..z};do for y in {a..z};do c=$x$y;[ $c = oo ]||echo $c;done;done
