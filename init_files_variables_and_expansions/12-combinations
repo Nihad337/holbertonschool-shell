@@ -1,1 +1,2 @@
-for x in {a..z};do for y in {a..z};do c=$x$y;[ $c = oo ]||echo $c;done;done
+#!/bin/bash
+echo {a..z}{a..z}|tr ' ' '\n'|grep -v '^oo$'
