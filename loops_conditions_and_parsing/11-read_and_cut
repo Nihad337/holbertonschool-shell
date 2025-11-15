@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
-# asfasf
+# asasfasf
 
-while IFS=: read -r user _ uid _ _ home _; do echo "$user $uid $home"; done < /etc/passwd
+while IFS=: read -r user _ uid _ _ home _; do
+  echo "$user $uid $home"
+done < /etc/passwd
