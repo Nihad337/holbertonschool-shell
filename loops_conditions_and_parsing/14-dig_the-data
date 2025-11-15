@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#asfasf
+awk '{ count[$1,$9]++ } END { 
+    for (key in count) {
+        split(key, arr, SUBSEP)
+        print count[key], arr[1], arr[2]
+    }
+}' apache-access.log | sort -nr
