@@ -1,7 +1,7 @@
-#!/usr/bin/env bash
-#safasfoa
-#asfsfa
-while IFS=: read -r username password uid gid full_home shell; do
-    # İstifadəçi haqqında məlumat çıxarırıq
-    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $username's place is protected by the passcode x, more info about the user here: $username"
+#!/bin/bash
+#asfasfasfa
+while IFS=: read -r username password uid gid gecos home shell; do
+    #safasfa
+    info="${gecos:-$username}"
+    echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode x, more info about the user here: $info"
 done < /etc/passwd
