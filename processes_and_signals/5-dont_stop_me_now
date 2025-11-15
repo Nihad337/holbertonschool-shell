@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# asfasfasfasf
+
+pid=$(ps aux | grep "To infinity and beyond" | grep -v grep | awk '{print $2}')
+
+#yafaasfasfasfasfasfasf
+if [ -n "$pid" ]; then
+    echo "Stopping the 'To infinity and beyond' process with PID $pid..."
+    kill "$pid"  
+else
+    echo "No 'To infinity and beyond' process found."
+fi
