@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
-# asfasf
-pid=$(pgrep -f "To infinity and beyond")
+# This script stops the "4-to_infinity_and_beyond" process
 
+# Give some time for the process to start and ensure we capture the correct process
+sleep 1
 
+# Find the PID of the 4-to_infinity_and_beyond process by matching the full command line
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+# Check if the process is running
 if [ -n "$pid" ]; then
-    echo "Stopping the 'To infinity and beyond' process with PID $pid..."
+    echo "Stopping the '4-to_infinity_and_beyond' process with PID $pid..."
     
+    # Send SIGSTOP signal to pause the process (effectively stop it)
+    kill -SIGSTOP "$pid" 
     
-    #asfasf
-    kill -STOP "$pid"  # Prosesin işini dayandırır
+    echo "'4-to_infinity_and_beyond' process has been stopped."
 else
-    echo "No 'To infinity and beyond' process found."
+    echo "No '4-to_infinity_and_beyond' process found."
 fi
