@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-# dgsa
-
+#safsf
 for file in *; do
-    # Yalnız fayl adı tire (-) ehtiva edirsə
-    if [[ "$file" == *-* ]]; then
-        # Tiredən sonrakı hissəni çıxar
-        echo "${file#*-}"
+    # Yalnız görünən fayllar və qovluqlar
+    if [ -f "$file" ]; then
+        # Faylın adında tire varsa
+        if [[ "$file" == *-* ]]; then
+            echo "${file#*-}"
+        else
+            echo "$file"
+        fi
     fi
-done
