@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# asfasf
+#asfasf
+
+trap "echo 'I am invincible!!!'" SIGTERM
+
+# Soasfasf: "To infinitasfasfmesajını sfasf f
 while true; do
-    echo "There can be only one"
-    sleep 1
+    echo "To infinity and beyond"
+    sleep 2
 done
