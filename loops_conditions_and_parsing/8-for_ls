@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# dgsa
+
+for file in *; do
+    # Yalnız fayl adı tire (-) ehtiva edirsə
+    if [[ "$file" == *-* ]]; then
+        # Tiredən sonrakı hissəni çıxar
+        echo "${file#*-}"
+    fi
+done
