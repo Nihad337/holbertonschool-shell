@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
-#safsf
+# asfasfas
+# asfa
+#asf
+
 for file in *; do
-    # Yalnız görünən fayllar və qovluqlar
+    # Yalnız faylları nəzərə al
     if [ -f "$file" ]; then
         # Faylın adında tire varsa
         if [[ "$file" == *-* ]]; then
@@ -10,3 +13,4 @@ for file in *; do
             echo "$file"
         fi
     fi
+done
