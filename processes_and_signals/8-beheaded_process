@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# asdfsa
+
+# asfasa
+sleep 1
+
+# Find the PID of the 4-to_infinity_and_beyond process by matching the full command line
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+# Check if the process is running
+if [ -n "$pid" ]; then
+    echo "Stopping the '4-to_infinity_and_beyond' process with PID $pid..."
+    
+    # Send SIGSTOP signal to pause the process (effectively stop it)
+    kill -SIGSTOP "$pid" 
+    
+    echo "'4-to_infinity_and_beyond' process has been stopped."
+else
+    echo "No '4-to_infinity_and_beyond' process found."
+fi
