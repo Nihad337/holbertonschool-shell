@@ -1,12 +1,22 @@
 #!/usr/bin/env bash
-# asfa
+# 67-stop_me_if_you_can - 7-highlander prosesini tapıb, SIGSTOP ilə dayandırır və nəzarət edir
 
-# 7-asfasf
+# 7-highlander prosesini tapmaq
 pid=$(pgrep -f "7-highlander")
 
 if [ -n "$pid" ]; then
     echo "7-highlander prosesi tapıldı, PID: $pid"
-    kill -SIGSTOP "$pid" && echo "7-highlander prosesi dayandırıldı (SIGSTOP)."
+    
+    # Prosesə SIGSTOP siqnalı göndəririk
+    kill -SIGSTOP "$pid" 2>/dev/null
+
+    # Prosesin dayandığını yoxlayaq
+    if kill -0 "$pid" 2>/dev/null; then
+        echo "7-highlander prosesi dayandırıldı (SIGSTOP)."
+    else
+        echo "7-highlander prosesi artıq dayandırılmışdır."
+    fi
 else
     echo "Heç bir '7-highlander' prosesi tapılmadı."
 fi
+
