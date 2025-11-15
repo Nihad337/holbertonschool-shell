@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#asfas
-#!/bin/bash
+#safasfas
 hour=0
+
 while [ $hour -le 12 ]; do
     echo "Hour: $hour"
     minute=1
@@ -10,4 +10,4 @@ while [ $hour -le 12 ]; do
         minute=$((minute + 1))
     done
     hour=$((hour + 1))
-done | head -n 70
+done | head -n 2291
