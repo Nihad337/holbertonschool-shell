@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #asfasfasfa
 while IFS=: read -r username password uid gid gecos home shell; do
     #safasfa
