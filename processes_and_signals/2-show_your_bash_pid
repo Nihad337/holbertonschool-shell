@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# shellcheck disable=SC2009
+
+#asfas
+ps auxf | grep '[b]ash' | awk '{print "Bash PID: "$2}'
