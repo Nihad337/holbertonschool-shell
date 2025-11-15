@@ -1,18 +1,6 @@
 #!/usr/bin/env bash
-# fafasffs
-# shellcheck disable=SC2009
-
-
-for pid in /proc/[0-9]*; do
-    #wegtwetgw
-    if [[ -f "$pid/comm" ]]; then
-        #wetgwetgwtg
-        process_name=$(cat "$pid/comm")
-        
-        #wegtwtgwetg
-        if [[ "$process_name" == *bash* ]]; then
-            #wetgwetgw
-            echo "PID: $(basename "$pid") - Proses adı: $process_name"
-        fi
-    fi
-done
+#ddnhnrdhd
+IFS=$'\n' read -d '' -r -a a < <(pgrep bash)
+length=${#a}
+for ((i=0;i<=length;i++)); do
+        echo "${a[$i]} bash"done
