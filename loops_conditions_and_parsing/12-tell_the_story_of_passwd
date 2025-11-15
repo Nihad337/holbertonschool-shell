@@ -1,20 +1,7 @@
 #!/usr/bin/env bash
 #sfsa
-IFS=":"
-
-#asfsaf
-output_file="passwd_story.txt"
-
-#sffas
-> "$output_file"
-
-# /etc/passwd faylını hər sətri ilə oxuyuruq
 while read -r USERNAME PASSWORD USER_ID GROUP_ID GECOS HOME_DIRECTORY COMMAND_SHELL
 do
-    # asfasasf
-    echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_SHELL." >> "$output_file"
-    echo "$USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $GECOS" >> "$output_file"
-    echo "---------------------------------------------" >> "$output_file"
+	echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMADN_SHELL. $USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $GECOS"
 done < /etc/passwd
 
-# asfas
