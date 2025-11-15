@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
-# asfas
+#asfas
+#!/bin/bash
 hour=0
-
 while [ $hour -le 12 ]; do
     echo "Hour: $hour"
     minute=1
     while [ $minute -le 59 ]; do
-        echo "$minute"
+        echo $minute
         minute=$((minute + 1))
     done
     hour=$((hour + 1))
