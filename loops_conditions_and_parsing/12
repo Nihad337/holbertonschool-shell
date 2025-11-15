@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+
 #dfhdhfdh
 IFS=':'
+
 #gdh
 while read -r username password userid groupid fullname homedir shell; do
     # Display the information in the required format
