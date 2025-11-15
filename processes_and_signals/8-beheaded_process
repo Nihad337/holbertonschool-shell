@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
-# asdfsa
+# asfa
 
-# asfasa
-sleep 1
+# 7-asfasf
+pid=$(pgrep -f "7-highlander")
 
-# Find the PID of the 4-to_infinity_and_beyond process by matching the full command line
-pid=$(pgrep -f "4-to_infinity_and_beyond")
-
-# Check if the process is running
 if [ -n "$pid" ]; then
-    echo "Stopping the '4-to_infinity_and_beyond' process with PID $pid..."
-    
-    # Send SIGSTOP signal to pause the process (effectively stop it)
-    kill -SIGSTOP "$pid" 
-    
-    echo "'4-to_infinity_and_beyond' process has been stopped."
+    echo "7-highlander prosesi tapıldı, PID: $pid"
+    kill -SIGSTOP "$pid" && echo "7-highlander prosesi dayandırıldı (SIGSTOP)."
 else
-    echo "No '4-to_infinity_and_beyond' process found."
+    echo "Heç bir '7-highlander' prosesi tapılmadı."
 fi
