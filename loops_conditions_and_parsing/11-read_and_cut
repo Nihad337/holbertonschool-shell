@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# asfaa
-
-while IFS=: read -r user _ uid _ _ home _; do
-  echo "$user $uid $home"
+#asfasffas
+while IFS=: read -r username x user_id group_id user_info home_directory shell; do
+    # Output the username, user_id, and home directory path
+    echo "Username: $username"
+    echo "User ID: $user_id"
+    echo "Home Directory: $home_directory"
+    echo "---------------------"
 done < /etc/passwd
