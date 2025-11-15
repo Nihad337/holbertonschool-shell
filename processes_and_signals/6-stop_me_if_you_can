@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# asfasf
+pid=$(pgrep -f "To infinity and beyond")
+
+
+if [ -n "$pid" ]; then
+    echo "Stopping the 'To infinity and beyond' process with PID $pid..."
+    
+    
+    #asfasf
+    kill -STOP "$pid"  # Prosesin işini dayandırır
+else
+    echo "No 'To infinity and beyond' process found."
+fi
