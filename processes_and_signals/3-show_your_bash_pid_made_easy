@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#asvsfva
+# shellcheck disable=SC2009
+for pid in /proc/[0-9]*; do
+    # Hər bir prosesin comm faylının olub-olmamasını yoxlayırıq
+    if [[ -f "$pid/comm" ]]; then
+        # comm faylını oxuyuruq ki, prosesin adı məlum olsun
+        process_name=$(cat "$pid/comm")
+        
+        # Əgər prosesin adı "bash" ilə başlayırsa, onu tapırıq
+        if [[ "$process_name" == *bash* ]]; then
+            # PID və proses adını ekrana çap edirik
+            echo "PID: $(basename "$pid") - Proses adı: $process_name"
+        fi
+    fi
+done					
