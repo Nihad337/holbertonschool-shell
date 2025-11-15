@@ -2,4 +2,4 @@
 # shellcheck disable=SC2009
 
 #asfas
-ps auxf | grep '[b]ash' | awk '{print "Bash PID: "$2}'
+ps auxf | grep '[b]ash' | awk '{print $2}'
