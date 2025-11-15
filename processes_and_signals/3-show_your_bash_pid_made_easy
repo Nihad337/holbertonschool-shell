@@ -3,4 +3,5 @@
 IFS=$'\n' read -d '' -r -a a < <(pgrep bash)
 length=${#a}
 for ((i=0;i<=length;i++)); do
-        echo "${a[$i]} bash"done
+        echo "${a[$i]} bash"
+done
