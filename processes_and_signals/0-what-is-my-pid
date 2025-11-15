@@ -1,4 +1,4 @@
-#!/bin/bash
-# asfasf
+ #!/usr/bin/env bash
+ ## asfasf
 
 echo "Tasfasf: $$"
