@@ -1,14 +1,20 @@
 #!/usr/bin/env bash
-# asfasf
-IFS=':'
+#sfsa
+IFS=":"
 
-# asfsaf
-while read -r username password userid groupid fullname homedir shell; do
-    # Replace empty fullname with an empty string if it doesn't exist
-    fullname="${fullname:-No full name}"
+#asfsaf
+output_file="passwd_story.txt"
 
-    # asfasf
-    echo "The user $username is part of the $groupid gang, lives in $homedir and rides $shell."
-    echo "$userid's place is protected by the passcode x, more info about the user here: $fullname"
-    echo "---------------------------------------------"
+#sffas
+> "$output_file"
+
+# /etc/passwd faylını hər sətri ilə oxuyuruq
+while read -r USERNAME PASSWORD USER_ID GROUP_ID GECOS HOME_DIRECTORY COMMAND_SHELL
+do
+    # asfasasf
+    echo "The user $USERNAME is part of the $GROUP_ID gang, lives in $HOME_DIRECTORY and rides $COMMAND_SHELL." >> "$output_file"
+    echo "$USER_ID's place is protected by the passcode $PASSWORD, more info about the user here: $GECOS" >> "$output_file"
+    echo "---------------------------------------------" >> "$output_file"
 done < /etc/passwd
+
+# asfas
