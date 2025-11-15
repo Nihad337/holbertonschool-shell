@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# asfasf
+while true; do
+    echo "There can be only one"
+    sleep 1
+done
