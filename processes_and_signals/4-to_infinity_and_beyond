@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#asfafs
+while true; do
+    echo "To infinity and beyond"
+    sleep 2  #asfas
+done
