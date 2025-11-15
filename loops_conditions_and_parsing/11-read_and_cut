@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# asasfasf
+# asfaa
 
 while IFS=: read -r user _ uid _ _ home _; do
   echo "$user $uid $home"
