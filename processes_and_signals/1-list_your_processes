@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-#asf
-ps -eo pid,ppid,uid,gid,user,tty,time,cmd --sort=ppid
+#zxvz
+ps auxf --sort=ppid | awk '{print $1, $9, $11, $12}' | head -n 20
