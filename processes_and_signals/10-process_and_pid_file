@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # asfasf
-#!/bin/bash
 
 PIDFILE="/tmp/myscript.pid"
 
@@ -20,6 +19,4 @@ sigquit_handler() {
     rm -f "$PIDFILE"
     exit 0
 }
-
-trap sigint_ha_
 
