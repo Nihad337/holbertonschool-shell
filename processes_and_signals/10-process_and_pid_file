@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # asfasf
-PIDFILE="/var/run/myscript.pid"
+#!/bin/bash
 
+PIDFILE="/tmp/myscript.pid"
 
 echo $$ > "$PIDFILE"
 
@@ -20,12 +21,5 @@ sigquit_handler() {
     exit 0
 }
 
-#dvdsg
-trap sigint_handler SIGINT
-trap sigterm_handler SIGTERM
-trap sigquit_handler SIGQUIT
+trap sigint_ha_
 
-while true; do
-    echo "To infinity and beyond"
-    sleep 1
-done
