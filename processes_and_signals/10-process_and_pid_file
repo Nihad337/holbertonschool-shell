@@ -2,7 +2,6 @@
 # asfasf
 
 PIDFILE="/tmp/myscript.pid"
-
 echo $$ > "$PIDFILE"
 
 sigint_handler() {
@@ -20,3 +19,11 @@ sigquit_handler() {
     exit 0
 }
 
+trap sigint_handler SIGINT
+trap sigterm_handler SIGTERM
+trap sigquit_handler SIGQUIT
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
