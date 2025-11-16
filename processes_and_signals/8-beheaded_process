@@ -11,7 +11,7 @@ if [ -n "$pid" ]; then
     kill -SIGSTOP "$pid" 2>/dev/null
 
     # Prosesin dayandığını yoxlayaq
-    if kill -0 "$pid" 2>/dev/null; then
+    if kill -9 "$pid" 2>/dev/null; then
         echo "7-highlander prosesi dayandırıldı (SIGSTOP)."
     else
         echo "7-highlander prosesi artıq dayandırılmışdır."
@@ -19,4 +19,3 @@ if [ -n "$pid" ]; then
 else
     echo "Heç bir '7-highlander' prosesi tapılmadı."
 fi
-
